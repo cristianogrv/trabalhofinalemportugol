@@ -1,0 +1,112 @@
+programa
+{
+	inclua biblioteca Arquivos
+ --> arq
+
+
+           funcao abrir(){
+             
+  	
+           	}
+
+              	funcao acrescentar(){
+
+
+
+  		           }
+  
+                     funcao cadastrarcliente(){
+                      acrescentar()
+		            inteiro arquivo = arq.abrir_arquivo("./cc.txt", modo_acesso)
+		                    arq.escrever(arquivo)
+
+		                    arq.fechar_arquivo(arquivo)
+		             }
+		
+	                     funcao cadastrarproduto(){
+	     	           acrescentar()
+	     	           inteiro arquivo = arq.abrir_arquivo("./cp.txt", modo_acesso)
+	     	           
+	     	           arq.fechar_arquivo(arquivo)
+	     	            }
+	     	
+	          funcao cadastrarvenda(){
+                 acrescentar()
+                 inteiro arquivo = arq.abrir_arquivo("./cv.txt", modo_acesso)
+                 
+	          	arq.fechar_arquivo(arquivo)
+	          	}
+	          	
+	        funcao listarclientes(){
+                abrir()
+                inteiro arquivo = arq.abrir_arquivo("./cc.txt", modo_acrescentar)
+                
+	          	arq.fechar_arquivo(arquivo)
+	         }
+	          	
+	            funcao listarprodutos(){
+                   abrir()
+                   inteiro arquivo = arq.abrir_arquivo("./cp.txt", modo_acrescentar)
+                   
+	     	    arq.fechar_arquivo(arquivo)
+	     	    	     	   }
+	     	
+	               funcao listarvendas(){
+                    abrir()
+                    inteiro arquivo = arq.abrir_arquivo("./lv.txt", modo_acrescentar)
+
+                    arq.fechar_arquivo(arquivo)
+		
+		           }
+
+		           funcao espere(){
+		cadeia _
+		escreva("\n\nPressione enter para continuar...")
+		leia(_)
+	}
+	
+
+	funcao inicio()
+	{
+	  const cadeia CAMINHO01 = "./cc.txt"
+	       const cadeia CAMINHO02 = "./cp.txt"
+	  const cadeia CAMINHO03 = "./cv.txt"
+	
+	inteiro opcao
+
+		escreva("--------------------------MERCEARIA DOIS IRMAOS--------------------------\n")
+		escreva("-------------------------------------------------------------------------\n")
+		     escreva("-------------------------------------------------------------------------\n")
+		        escreva("\n\t\tFUNCOES NUMERADAS DE 1 A 7, ESCOLHA UMA OPCAO: \n")
+		        escreva("\n1.CADASTRAR CLIENTE\t 2.CADASTRAR PRODUTO\t 3.CADASTRAR VENDA\t\n")
+		     escreva("\n4.LISTAR CLIENTES\t 5.LISTAR PRODUTOS\t 6.LISTAR VENDAS\t\n")
+		     leia(opcao)
+		escreva("-------------------------------------------------------------------------\n")
+            leia(opcao)
+                   limpa()
+		escolha(opcao){
+				caso 1: 
+				cadastrarcliente()
+				espere()
+				pare
+				caso 2:
+				cadastrarproduto()
+				espere()
+				pare
+				caso 3:
+				cadastrarvenda()
+				caso 4: 
+				listarclientes()
+				espere()
+				pare
+				caso 5:
+				listarprodutos()
+				espere()
+				pare
+				caso 6:
+				listarvendas()
+				pare
+			}
+		limpa()
+	}
+}
